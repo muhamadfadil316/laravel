@@ -33,6 +33,7 @@ Route::get('/profil', function() {
     return view('profil',['prodi'=>'Teknik Informatika']);
 });
 
+// books
 Route::get('/books', [BookController::class, 'index'])->name('books.index');
 Route::get('/books/create', [BookController::class, 'create']);
 Route::post('/books/store', [BookController::class, 'store']);
