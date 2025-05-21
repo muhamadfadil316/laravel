@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\KelurahanController;
 use App\Http\Controllers\PasienController;
@@ -42,10 +43,14 @@ Route::get('/books/{id}/edit', [BookController::class, 'edit'])->name('books.edi
 Route::put('/books/{id}', [BookController::class, 'update'])->name('books.update');
 Route::delete('/books/{id}', [BookController::class, 'destroy'])->name('books.destroy');
 
-
+// kelurahan
 Route::get('/kelurahan', [KelurahanController::class, 'index']);
 
+// pasien
 Route::get('/pasien', [PasienController::class, 'index']);
+
+// admin
+Route::get('/admin', [AdminController::class, 'index']);
 
 
 
